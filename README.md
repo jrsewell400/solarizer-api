@@ -75,7 +75,7 @@ Expected response:
 ```sh
 {"description":"Turn it off. Energy conservation is one of the most important things you can do to reduce your carbon footprint."}
 ```
-Retrieve weather forecast for a specific location:
+Retrieve FAQ's for [Solarizer](https://github.com/PaulDebevec/solarizer) app:
 ```sh
 GET api/v1/faq
 ```
