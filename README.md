@@ -14,22 +14,11 @@
 
 This API is used by the [Solarizer](https://github.com/PaulDebevec/solarizer) app. This API has two endpoints, one for a random eco-tip, and the other is a FAQ for the [Solarizer](https://github.com/PaulDebevec/solarizer) Front-End.
 
-### Learning Goals: 
-
-- refactoring
-- serializers
-- consuming APIs
-- exposing APIs
-- authentication
-- password encryption
-
 ### Built with:
 
-- Ruby: 2.5.1
-- PostgreSQL: 12.2
-- Rails: 6.0.3
-- Bcrypt (password encryption)
-- fast_jsonapi
+- Ruby: 2.5.3
+- PostgreSQL: 9.3
+- Rails: 5.1.7
 
 ***Testing framework***
 - RSpec
