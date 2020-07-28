@@ -4,5 +4,4 @@ class Tip < ApplicationRecord
   def self.random_tip
     Tip.all.sample
   end
-  
 end
