@@ -4,7 +4,6 @@
 ## Table of Contents
 
 * [About](#about)
-  * [Tech Stack](#tech-stack)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
   * [Testing](#testing)
