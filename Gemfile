@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 ruby '2.5.3'
 
 gem 'rails', '5.1.7'
@@ -15,6 +14,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 gem 'fast_jsonapi'
+gem 'json'
 
 
 group :development, :test do
@@ -23,6 +23,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'shoulda-matchers'
 end
 
 group :development do

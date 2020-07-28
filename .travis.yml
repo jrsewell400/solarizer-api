@@ -1,0 +1,21 @@
+language: ruby
+rbenv:
+- 2.5.3
+addons:
+  postgresql: 9.6
+  chrome: stable
+dist: xenial
+before_install:
+  - yes | gem update --system --force
+  - gem install bundler
+script:
+  - yarn
+  - bundle exec rails db:{create,migrate} RAILS_ENV=test
+  - bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: v+UzckEUEB8fBIlyehQ8BT3IxeXepAqHpOdBm68TpxG6Cmcz+lbdnPztdddxM1wmkqjFGv5oJTnAzBS8p0ytZjj4epoEu2d9D/JBGGlT2lUPn9Khx7SyI1vb2Rzgp1I0YLsA5XZqTVtftG0w7Sbl8NDm2xf3+Z5BGjtctCnajxRHolsUEKBosK0jf7NLzDA3ZmY1ebV4YK5kwqJRVp7HqDQifuyFbhhqZQzRsC08ooXCprAGXg//pLY/PFRIaz1G7cyd5yHhu1nYXwWz9gHxo0ffdP1pqn+lk73vTWmnUTJnPugDzDwawag/U4c7ycvE5KA5oD57UgA0zQQ5/g/2ue2G0JAhGioWJDu4aejwpsrO5m0wBwuRtMTSiitM9xnrxAKJ5XO3JO4bFbk/97JXJSFVrAh6+t/JI4km4i/ytgjZQCPy0ePIR3YVFpmEvuiuMOpS8Hc8HFPopG1C9fVb0QD9BEGYpR4auGlvlogLLiOIjW+luPVKk96YB+YE2FygG0b5C2nFxyQc5fYD0Gg8qR2MkdpllVs1o8ckRSviNnjYUVTWZ7WbMSCwzKrPo+BTh4nVmxgEuyR0W6h7mPPwrC08R+GhiDbLzSZAr3u7r3o3/MD6WIMZM6RC1VI6C+saPN3OUuggZTRgr3oixEKTAyJ6tsyGemffJOZAcw66A0o=
+  app: secret-meadow-99085
+  skip_cleanup: 'true'
+  run: rails db:{migrate,seed}
