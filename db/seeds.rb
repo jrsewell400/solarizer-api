@@ -15,3 +15,8 @@ Tip.create(description: "Buy local. The closer to home products are made and bou
 Tip.create(description: "Try to cut out plastic, especially types which cannot be recycled locally.")
 Tip.create(description: "Electronics that are plugged in still consume energy.  Unplug unused electronics to save money on your energy bill!")
 Tip.create(description: "Eat less meat!  Meat is one of the biggest contributors to climate change.")
+
+Question.destroy_all
+
+Question.create(faq: 'Overview', answer: 'Solarizer is a web app for solar energy enthusiasts seeking estimates on electricity production of a photovoltaic (PV) system based on a few simple inputs.')
+Question.create(faq: 'Get Started', answer: 'Users provide information about the system \'s location, basic design parameters, and an optional historical monthly energy usage. Solarizer calculates estimates of the system\'s annual and monthly electricity production, and an estimate of the value of that electricity.')
