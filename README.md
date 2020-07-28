@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.com/jrsewell400/solarizer-api.svg?branch=master)](https://travis-ci.com/github/adumortier/gardenthat)
 ## Solarizer API
 
 ## Table of Contents
